@@ -4,7 +4,9 @@ package net.levi.lt;
 public class LTPhoto {
 
     public Data parseJSON(String json){
-        return new Data();
+       Data datum = new Data();
+       datum.id =1;
+       return datum;
     }
     
     public class Data{
