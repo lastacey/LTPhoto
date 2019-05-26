@@ -1,12 +1,13 @@
 
 package net.levi.lt;
 
+import com.google.gson.Gson;
+
 public class LTPhoto {
+    Gson gson = new Gson();
 
     public Data parseJSON(String json){
-       Data datum = new Data();
-       datum.id =1;
-       return datum;
+        return gson.fromJson(json, Data.class);
     }
     
     public class Data{
