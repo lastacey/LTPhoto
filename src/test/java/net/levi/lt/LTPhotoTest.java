@@ -6,10 +6,12 @@ import net.levi.lt.LTPhoto.Data;
 import static org.junit.Assert.*;
 
 public class LTPhotoTest {
+    String baconipsum = "capicola kielbasa pancetta doner sausage";
+    String jsoninput = "{\"id\":1,\"title\":\""+baconipsum+"\"}";
 
     @Test public void givenJSON_ExpectsDataObject() {
-        String baconipsum = "capicola kielbasa pancetta doner sausage";
-        Data datum = new LTPhoto().parseJSON("{\"id\":1,\"title\":\""+baconipsum+"\"}") ;
+  
+        Data datum = new LTPhoto().parseJSON(jsoninput) ;
 
         assertNotNull(datum);
         assertEquals(1,datum.id);
@@ -17,7 +19,10 @@ public class LTPhotoTest {
 
     }
 
+      @Test public void givenDataStrings_ExpectsFormat(){
 
+        assertEquals("[1] " + baconipsum, new LTPhoto().parseJSON(jsoninput).toString());
+    } 
 
 
 }
