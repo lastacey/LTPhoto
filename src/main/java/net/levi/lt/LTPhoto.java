@@ -7,7 +7,9 @@ public class LTPhoto {
         return new Data();
     }
     
-    public class Data{}
+    public class Data{
+        int id;
+    }
 
     public static void main(String[] args) {
 
