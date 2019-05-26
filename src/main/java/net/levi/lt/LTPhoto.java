@@ -1,6 +1,8 @@
 
 package net.levi.lt;
 
+import java.util.List;
+
 import com.google.gson.Gson;
 
 public class LTPhoto {
@@ -8,6 +10,10 @@ public class LTPhoto {
 
     public Data parseJSON(String json){
         return gson.fromJson(json, Data.class);
+    }
+    
+    public List<Data> parseJSONList(String json){
+        return null;
     }
     
     public class Data{
