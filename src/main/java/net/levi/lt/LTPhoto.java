@@ -12,6 +12,7 @@ public class LTPhoto {
     
     public class Data{
         int id;
+        String title;
     }
 
     public static void main(String[] args) {
