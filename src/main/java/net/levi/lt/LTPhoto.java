@@ -3,6 +3,7 @@ package net.levi.lt;
 
 import java.util.List;
 
+import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 
 public class LTPhoto {
@@ -13,7 +14,7 @@ public class LTPhoto {
     }
     
     public List<Data> parseJSONList(String json){
-        return null;
+        return gson.fromJson(json, new TypeToken<List<Data>>(){}.getType());
     }
     
     public class Data{
@@ -24,7 +25,6 @@ public class LTPhoto {
         public String toString(){
             return "["+id+"] "+title;
         }
-
     }
 
     public static void main(String[] args) {

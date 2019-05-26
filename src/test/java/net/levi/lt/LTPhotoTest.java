@@ -27,9 +27,14 @@ public class LTPhotoTest {
 
     @Test 
     public void givenJSONArray_ExpectsListofData(){
-        List<Data> dataset = new LTPhoto().parseJSONList(jsoninput);
-
+        List<Data> dataset = new LTPhoto().parseJSONList("["+jsoninput+"]");
         assertNotNull(dataset);
+        assertEquals(1, dataset.size());
+        
+        Data datum = dataset.get(0);
+        assertEquals(1,datum.id);
+        assertEquals(baconipsum,datum.title); 
+
     } 
 
 }
