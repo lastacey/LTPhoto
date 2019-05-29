@@ -10,7 +10,7 @@ public class UrlDataComTest{
     public void givenURL_ExpectsNotnull(){
         UrlDataCom urlDat = new UrlDataCom();
 
-        assertNotNull(null); 
+        assertNotNull(urlDat.urlGet("")); 
 
     } 
 }
