@@ -6,7 +6,7 @@ import java.util.List;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 
-public class LTPhoto {
+public class DataParse {
     Gson gson = new Gson();
 
     public Data parseJSON(String json){
@@ -27,7 +27,4 @@ public class LTPhoto {
         }
     }
 
-    public static void main(String[] args) {
-
-    }
 }
