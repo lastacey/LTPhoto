@@ -17,7 +17,7 @@ public class UrlDataComTest {
 
     } 
 
-   @Test(expected = ConnectException.class)
+   @Test(expected = IOException.class)
    public void givenMissDirectedURL_Throws() throws MalformedURLException, IOException {
        UrlDataCom urlDat = new UrlDataCom();
 
